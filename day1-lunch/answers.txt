@@ -1,0 +1,29 @@
+  538344 /Users/cmdb/data/genomes/BDGP6.Ensembl.81.gtf
+number of lines in BDGP6.Ensembl
+     514 temp.txt
+#!genebuild-last-updated 2014-09
+#!genome-build BDGP6
+#!genome-build-accession NCBI:GCA_000001215.4
+#!genome-date 2014-07
+#!genome-version BDGP6
+CDS
+Selenocysteine
+UTR
+exon
+gene
+start_codon
+stop_codon
+transcript
+   1 #!genebuild-last-updated 2014-09
+   1 #!genome-build BDGP6
+   1 #!genome-build-accession NCBI:GCA_000001215.4
+   1 #!genome-date 2014-07
+   1 #!genome-version BDGP6
+160095 CDS
+   4 Selenocysteine
+79026 UTR
+186297 exon
+17558 gene
+30367 start_codon
+30274 stop_codon
+34718 transcript
