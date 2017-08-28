@@ -1,0 +1,5 @@
+Question 1: fastqc SRR072893.fastq 
+Question 2: hisat2 -x BDGP6 SRR072893.fastq -p 4 -S number2.sam
+Question 3: samtools sort -O bam number2.sam > number2_sorted.bam
+Question 4: samtools index -b number2_sorted.bam 
+Question 5: stringtie number2_sorted.bam -G BDGP6.Ensembl.81.gtf -p 4 -e -o number2_sorted.gtf -B
