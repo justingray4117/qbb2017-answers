@@ -8,11 +8,12 @@ for i in lines:
     if i.startswith( "@" ):
     # filters out lines starting with t_id
         continue
-    while count < 10:        
+    fields = i.split("\t")
+    if count < 10:        
     #Start and end are in columns 3 and 4
-       fields = i.split("\t")
        count += 1
-       print fields[0]
+       print fields[2]
+     
        
             
 
