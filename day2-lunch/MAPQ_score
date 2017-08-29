@@ -10,7 +10,7 @@ for i in lines:
     # filters out lines starting with t_id
         continue
     fields = i.split("\t")
-    MAPQ = int(fields[4])
+    MAPQ = float(fields[4])
     sum += MAPQ
 
 average_MAPQ = (sum / 22145900)
