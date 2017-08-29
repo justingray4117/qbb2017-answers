@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+import sys
+
+lines = sys.stdin.readlines()
+
+sum = 0
+for i in lines:
+    if i.startswith( "@" ):
+    # filters out lines starting with t_id
+        continue
+    fields = i.split("\t")
+    MAPQ = int(fields[4])
+    sum += MAPQ
+
+average_MAPQ = (sum / 22145900)
+print average_MAPQ
+    
