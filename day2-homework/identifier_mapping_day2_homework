@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+import sys
+
+identifier_map = {}
+
+m = open(sys.argv[1])
+for i in m:
+    fields = i.split()
+    f = fields[0]
+    a = fields[1]
+    identifier_map[f] = a
+    
+
+
+new_lines = open(sys.argv[2])
+argument = sys.argv[-1]
+for i in new_lines:
+    fields = i.split("\t")
+    f = fields[8]
+    if "gene_id" in f:
+        continue
+    if argument == "-e":
+        if f in identifier_map: 
+            print i, "\t", identifier_map[f]
+        else:
+            print "error in finding: ", f
+    else:
+        if f in identifier_map:
+            print i, "\t", identifier_map[f]
+        
+    
+
+
+
+
+
