@@ -128,8 +128,6 @@ for i in range(len(log_non_zero_dN_dS)):
 for i in range(len(log_non_zero_dN_dS)):
     if log_non_zero_dN_dS[i] > np.log2(779):
         signif[i] = log_non_zero_dN_dS[i]
-    elif log_non_zero_dN_dS[i] < np.log2(float(1)/float(779)):
-        signif[i] = log_non_zero_dN_dS[i]
     else:
         graph_log_dN_dS[i] = log_non_zero_dN_dS[i]
 
