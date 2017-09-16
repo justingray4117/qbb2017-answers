@@ -1,0 +1,85 @@
+/usr/local/Cellar/quast/4.5/quast.py -o quast_output -t 16 contigs_good_cov.fasta contigs_nanopore.fasta contigs_spades.fasta contigs_velvet.fa
+
+Version: 4.5, 15ca3b9
+
+System information:
+  OS: Darwin-16.7.0-x86_64-i386-64bit (macosx)
+  Python version: 2.7.10
+  CPUs number: 4
+
+Started: 2017-09-15 20:29:49
+
+Logging to /Users/cmdb/qbb2017-answers/week2/quast_output/quast.log
+
+CWD: /Users/cmdb/qbb2017-answers/week2
+Main parameters: 
+  Threads: 16, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  1  contigs_good_cov.fasta ==> contigs_good_cov
+  2  contigs_nanopore.fasta ==> contigs_nanopore
+  3  contigs_spades.fasta ==> contigs_spades
+  4  contigs_velvet.fa ==> contigs_velvet
+
+2017-09-15 20:29:49
+Running Basic statistics processor...
+  Contig files: 
+    1  contigs_good_cov
+    2  contigs_nanopore
+    3  contigs_spades
+    4  contigs_velvet
+  Calculating N50 and L50...
+    1  contigs_good_cov, N50 = 99915, L50 = 1, Total length = 99915, GC % = 52.58, # N's per 100 kbp =  0.00
+    2  contigs_nanopore, N50 = 4036, L50 = 6, Total length = 58343, GC % = 52.39, # N's per 100 kbp =  0.00
+    3  contigs_spades, N50 = 718, L50 = 8, Total length = 14250, GC % = 51.43, # N's per 100 kbp =  0.00
+    4  contigs_velvet, N50 = 632, L50 = 5, Total length = 7243, GC % = 50.71, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/GC_content_plot.pdf
+  Drawing contigs_good_cov GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_good_cov_GC_content_plot.pdf
+  Drawing contigs_nanopore GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_nanopore_GC_content_plot.pdf
+  Drawing contigs_spades GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_spades_GC_content_plot.pdf
+  Drawing contigs_velvet GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_velvet_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/coverage_histogram.pdf
+  Drawing contigs_good_cov coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_good_cov_coverage_histogram.pdf
+  Drawing contigs_nanopore coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_nanopore_coverage_histogram.pdf
+  Drawing contigs_spades coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_spades_coverage_histogram.pdf
+  Drawing contigs_velvet coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2/quast_output/basic_stats/contigs_velvet_coverage_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2017-09-15 20:29:53
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2017-09-15 20:29:54
+RESULTS:
+  Text versions of total report are saved to /Users/cmdb/qbb2017-answers/week2/quast_output/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/cmdb/qbb2017-answers/week2/quast_output/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Users/cmdb/qbb2017-answers/week2/quast_output/report.html
+  PDF version (tables and plots) is saved to /Users/cmdb/qbb2017-answers/week2/quast_output/report.pdf
+  Icarus (contig browser) is saved to /Users/cmdb/qbb2017-answers/week2/quast_output/icarus.html
+  Log saved to /Users/cmdb/qbb2017-answers/week2/quast_output/quast.log
+
+Finished: 2017-09-15 20:29:54
+Elapsed time: 0:00:05.341396
+NOTICEs: 1; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
