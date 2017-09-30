@@ -1,0 +1,9 @@
+
+
+
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno phenotype.txt --pca 2 --allow-no-sex --linear 
+
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pca 2 --mind --allow-extra-chr
+
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno phenotype.txt --allow-no-sex --linear
+
