@@ -1,0 +1,27 @@
+bowtie2-build chr19.fa indexed_chr19.fa
+
+bowtie2 -q -x indexed_chr19.fa -U input_G1E.fastq > input_G1E_mapped.fastq
+
+bowtie2 -q -x indexed_chr19.fa -U input_ER4.fastq > input_ER4_mapped.fastq
+
+macs2 callpeak -t CTCF_G1E_mapped.fastq -c input_G1E_mapped.fastq  --outdir G1E_macs2
+
+macs2 callpeak -t CTCF_ER4_mapped.fastq -c input_ER4_mapped.fastq  --outdir ER4_macs2
+
+bedtools intersect -a ./G1E_macs2_wcontrol/NA_peaks.narrowPeak -b ./ER4_macs2_wcontrol/NA_peaks.narrowPeak -v > CTCF_lost.bed
+
+bedtools intersect -a ./ER4_macs2_wcontrol/NA_peaks.narrowPeak -b ./G1E_macs2_wcontrol/NA_peaks.narrowPeak -v > CTCF_gained.bed
+
+sort -n -r -k 9 NA_peaks.narrowPeak | head -n 100 > G1E_sorted_.narrowpeak
+
+sort -n -r -k 9 NA_peaks.narrowPeak | head -n 100 > ER4_sorted_.narrowpeak
+
+bedtools getfasta -fi chr19.fa -bed ./G1E_macs2_wcontrol/G1E_sorted_.narrowpeak > G1E_macs2_fasta_meme.fa
+
+ bedtools getfasta -fi chr19.fa -bed ./ER4_macs2_wcontrol/ER4_sorted_.narrowpeak > ER4_macs2_fasta_meme.fa
+
+xcode-select --install
+
+brew install cpanminus; cpanm install XML::Simple
+
+/usr/local/opt/meme/bin/meme-chip -meme-maxw 20 -db motif_databases/JASPAR/JASPAR_CORE_2016_vertebrates.meme ER4_macs2_fasta_meme.fa
