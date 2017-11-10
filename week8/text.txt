@@ -1,0 +1,10 @@
+  hifive 5c-complete express -C Nora_ESC_male_E14.counts -P week8 Nora_Primers.bed 
+
+
+hifive 5c-heatmap -i week8.png -d fragment -b 0 week8.fcp week8.heat 
+
+
+hifive 5c-heatmap -i week8.png -d fragment -b 0 week8.heat 
+
+
+grep "chrX" ctcf_peaks.tsv > chrx_ctcf_peaks.tsv

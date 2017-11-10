@@ -1,0 +1,19 @@
+Top reverse primer interactions
+Reverse region = [98831147 98834143], Forward region = [98840770 98841225], enrichment = 4.43816
+Reverse region = [98837505 98840769], Forward region = [98843247 98848362], enrichment = 4.44472
+Reverse region = [98841226 98843246], Forward region = [98843247 98848362], enrichment = 4.1334
+Reverse region = [98848363 98849661], Forward region = [98912564 98916620], enrichment = 3.26003
+Reverse region = [98855721 98862019], Forward region = [98912564 98916620], enrichment = 4.32642
+Reverse region = [98867229 98869140], Forward region = [98862020 98867228], enrichment = 4.866
+
+Top forward primer interactions
+Forward region = [98834144 98837504], Reverse region = [98831147 98834143], enrichment = 2.50146
+Forward region = [98840770 98841225], Reverse region = [98831147 98834143], enrichment = 4.43816
+Forward region = [98843247 98848362], Reverse region = [98837505 98840769], enrichment = 4.44472
+Forward region = [98849662 98850575], Reverse region = [98837505 98840769], enrichment = 4.44472
+Forward region = [98862020 98867228], Reverse region = [98867229 98869140], enrichment = 4.866
+Forward region = [98869141 98870522], Reverse region = [98831147 98834143], enrichment = 2.60163
+Forward region = [98870747 98872270], Reverse region = [98848363 98849661], enrichment = 2.41271
+Forward region = [98881682 98887039], Reverse region = [98837505 98840769], enrichment = 1.60091
+Forward region = [98894033 98899653], Reverse region = [98831147 98834143], enrichment = 1.89508
+Forward region = [98912564 98916620], Reverse region = [98855721 98862019], enrichment = 4.32642

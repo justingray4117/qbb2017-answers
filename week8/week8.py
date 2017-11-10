@@ -41,33 +41,19 @@ ctcf_enrich=enrichment[f_index,:][:,r_index]
 
 f_numpy = numpy.argmax(ctcf_enrich, axis = 0)
 f_val = numpy.amax(ctcf_enrich, axis = 0)
+r_numpy = numpy.argmax(ctcf_enrich, axis = 1)
+r_val = numpy.amax(ctcf_enrich, axis = 1)
 
-
-
-#print numpy.argmax(ctcf_enrich, axis = 1)
-#print numpy.amax(ctcf_enrich, axis = 1)
-print len(f_index)
-count = 0
-for i in f_numpy:
-    print reverse[f_index[i]] + " " + f_val[count]
-    count += 1
-
-print reverse
-#for i in range(len(r_numpy)):
-
-
-#for i,pos in enumerate([f_index,:]):
-#    v = 0
-#    index = 0
-#    for j,frag in enumerate(ctcf_enrich.row()):
-#        if frag > v:
-#            v = frag
-#            index = j
-#            print "Coorderinates = " + str(f_index[j]) + "," +  str(r_index[i]) + " Val = " + str(v)
-
-
-
-
+print 'Top reverse primer interactions'
+rev_i = 0
+for fwd_i in f_numpy:
+    print 'Reverse region = %s, Forward region = %s, enrichment = %s' % (reverse[rev_i], forward[fwd_i], f_val[rev_i])
+    rev_i += 1
+print '\nTop forward primer interactions'
+fwd_j = 0
+for rev_j in r_numpy:
+    print 'Forward region = %s, Reverse region = %s, enrichment = %s' % (forward[fwd_j], reverse[rev_j], r_val[fwd_j])
+    fwd_j += 1
 
 
 
