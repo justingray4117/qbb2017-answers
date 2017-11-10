@@ -2,7 +2,9 @@
 
 import numpy 
 import sys
-
+"""
+./week8.py week8_enrichment.heat.npz chrx_ctcf_peaks.tsv 
+"""
 
 npz = open(sys.argv[1])
 ctcf = open(sys.argv[2])
