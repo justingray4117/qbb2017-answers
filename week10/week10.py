@@ -119,25 +119,33 @@ m = np.max(np.abs(X))
 
 
 #diff_numpy = df.values
+early = [ 'CFU', 'mys', 'mid' ]
+late = [ 'poly', 'unk', 'int' ]
 
-diff = df.ix[:,["CFU","mys","unk","poly"]]
 
-diff_matrx = diff.as_matrix(columns = df.columns[0:5])
+df = pd.read_csv( sys.argv[1], sep='\t' ).dropna(how='any')
+df['avg_early'] = df[early].mean(axis=1)
+df['avg_late'] = df[late].mean(axis=1)
 
-scipy_t = []
+print df
 
-p_value = []
+t_stat,p_val = stats.ttest_ind(df[early],df[late], axis=1)
 
-CFU_mys=  diff_matrx[:,0:2]
+df['p_value'] = p_val
 
-unk_poly = diff_matrx[:,2:4]
+print df
 
-for i in range(len(diff)):
-     t_stat,p_val = stats.ttest_ind(CFU_mys[i],unk_poly[i], axis=0)
-     p_value.append(p_val)
+df['ratio'] = df['avg_early'] / df['avg_late']
+df = df.mask( df['p_value'] > 0.05 ).dropna()
+down = df.mask( df['ratio'] > 0.5 ).dropna()
+up = df.mask( df['ratio'] < 2.0 ).dropna()
 
-print p_value
-print sorted(p_value)
+
+new_df= pd.concat( [ down, up ] )[['gene','ratio','p_value']].sort_values('p_value')
+
+print new_df.to_csv(index=False,sep='\t')
+
+
 
 
 
