@@ -39,8 +39,6 @@ leaves_columns = hac.leaves_list(columns)
 X = df.values
 X = X[leaves_rows,:][:,leaves_columns]
 
-print "Rows =", leaves_rows, "\nColumns =", leaves_columns
-
 labels = []
 
 row_header = list(df.columns.values)
@@ -114,11 +112,10 @@ m = np.max(np.abs(X))
 #plt.ylabel("poly")                 # label the y-axis
 #plt.scatter(kmean[:,0],kmean[:,1])
 #plt.savefig("clean_scatter.png")      # Save the figure
-#plt.close()              #
+#plt.close()              
 #print len()
 
 
-#diff_numpy = df.values
 early = [ 'CFU', 'mys', 'mid' ]
 late = [ 'poly', 'unk', 'int' ]
 
@@ -127,13 +124,13 @@ df = pd.read_csv( sys.argv[1], sep='\t' ).dropna(how='any')
 df['avg_early'] = df[early].mean(axis=1)
 df['avg_late'] = df[late].mean(axis=1)
 
-print df
+
 
 t_stat,p_val = stats.ttest_ind(df[early],df[late], axis=1)
 
 df['p_value'] = p_val
 
-print df
+
 
 df['ratio'] = df['avg_early'] / df['avg_late']
 df = df.mask( df['p_value'] > 0.05 ).dropna()
@@ -149,16 +146,6 @@ print new_df.to_csv(index=False,sep='\t')
 
 
 
-
-#for i in range(len(scipy_t)):
-#    fields = scipy_t[i].split("pvalue=")
-#    p_value.append(fields[1])#
-
-#print p_value
-
-
-#diff["CFU"] = diff[["CFU","mys"]].mean(axis=1)
-#diff["unk"] = diff[["unk","poly"]].mean(axis=1)
 
 
 

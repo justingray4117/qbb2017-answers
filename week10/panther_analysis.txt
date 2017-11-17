@@ -1,0 +1,8 @@
+Description of gene:
+
+Creb3l3:
+It's a cAMP response element regulated by bZIP TF and functions in a G-protein signaling pathway. 
+
+
+SLC52A3:
+Likely plays a role in the absorption of riboflavin. 
