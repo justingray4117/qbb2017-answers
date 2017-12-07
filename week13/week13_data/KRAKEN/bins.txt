@@ -1,0 +1,17 @@
+Bin 1 = Staphylococcus haemolyticus JCSC1435
+
+Bin 2 = Leuconostoc citreum KM20
+
+Bin 3 = Staphylococcus lugdunensis HKU09-01
+
+Bin 4 = Enterococcus faecalis OG1RF
+
+Bin 5 = Cutibacterium avidum 44067
+
+Bin 6 = Staphylococcus epidermidis RP62A
+
+Bin 7 = Staphylococcus aureus 
+
+
+labels = ['Staphylococcus haemolyticus JCSC1435','Leuconostoc citreum KM20',
+'Staphylococcus lugdunensis HKU09-01','Enterococcus faecalis OG1RF','Cutibacterium avidum 44067','Staphylococcus epidermidis RP62A','Staphylococcus aureus']
