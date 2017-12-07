@@ -1,0 +1,5 @@
+~/KronaTools-2.7/scripts/ImportText.pl SRR492183.kona SRR492186.kona SRR492188.kona SRR492189.kona SRR492190.kona SRR492193.kona SRR492194.kona SRR492197.kona 
+
+
+grep ">" bins/bin.2.fa | head 
+grep NODE_30_length_116726_cov_3.835555 ./KRAKEN/assembly.kraken
